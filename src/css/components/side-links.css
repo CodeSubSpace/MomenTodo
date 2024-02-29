@@ -10,7 +10,7 @@
 
     border-radius: 15px;
     padding: 5px 15px;
-    font-family: "Namdhinggo", serif;
+    font-family: inherit;
 }
 
 .focus-links__header {
@@ -45,4 +45,13 @@
 
 .fav-icon {
     width: 15px;
+}
+
+.new-input-link {
+    background-color: var(--mon-white);
+    border: none;
+    border-bottom: 1px solid var(--mon-black);
+    width: 90%;
+    padding: 5px;
+    font-family: inherit;
 }
