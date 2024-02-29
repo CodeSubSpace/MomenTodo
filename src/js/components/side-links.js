@@ -1,6 +1,7 @@
 const sideLinks = document.querySelector(".side-button:first-child");
 const sideFocus = document.querySelector(".side-button:last-child");
 const links = document.querySelector(".links");
+const link = document.querySelector(".link");
 
 // input 누르고 엔터 시 리스트 추가
 function addLink(event){
@@ -26,6 +27,7 @@ function addLink(event){
     
         newDiv.appendChild(newImg);
         newDiv.appendChild(newSpan);
+        newDiv.classList.add("hover-brown");
         links.appendChild(newDiv);
 
         event.target.remove();
@@ -56,5 +58,8 @@ function addlinkController(event){
 sideLinks.addEventListener("click", addlinkController);
 
 
+// link hover 시 edit page 등장
 
+// link edit rename
 
+// link edit remove
