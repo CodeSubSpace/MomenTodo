@@ -1,0 +1,11 @@
+.hover-mondrain-black:hover {
+    background-color: var(--mon-black);
+    color: white;
+
+    transition: 0.2s ease-in-out;
+}
+
+.hover-brown:hover {
+    background-color: #E0B88A;
+    color: #FAF7E5;
+}
