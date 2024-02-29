@@ -16,6 +16,7 @@
 
 /* css-animation */
 @import "css-animation/hover.css";
+@import "css-animation/fade-in.css";
 
 body {
     font-family: "Namdhinggo", serif;

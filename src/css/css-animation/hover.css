@@ -9,3 +9,13 @@
     background-color: #E0B88A;
     color: #FAF7E5;
 }
+
+.link i{
+    display: none;
+    padding: 10px;
+    z-index: 99;
+}
+
+.link:hover .link__column i {
+    display: inline;
+}

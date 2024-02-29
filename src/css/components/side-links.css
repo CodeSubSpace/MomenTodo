@@ -28,6 +28,7 @@
     padding: 10px;
     max-height: 220px;
 
+    overflow-x: visible;
     overflow-y: scroll;
 }
 
@@ -36,9 +37,12 @@
 }
 
 .link {
+    position: relative;
     display: flex;
-    gap: 10px;
-    padding: 5px;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 10px;
+    padding-right: 5px;
     border: 1px solid var(--mon-white);
     border-radius: 5px;
 }
@@ -54,4 +58,67 @@
     width: 90%;
     padding: 5px;
     font-family: inherit;
+}
+
+.pop-up {
+    position: fixed;
+    top: 55px;
+    left: 20px;
+    width: 25%;
+    height: 100px;
+
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--mon-white);
+    border : 1px solid var(--mon-black);
+    border-radius: 10px;
+
+    padding: 10px;
+
+    transition: 3s ease-in-out;
+}
+
+.pop-up div:first-child {
+    display: flex;
+    justify-content: end;
+}
+
+.pop-up div:last-child {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:10px;
+}
+
+.pop-up button {
+    background-color: var(--mon-white);
+    /* border: 1px solid var(--mon-black); */
+    border:none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.pop-up div:first-child button{
+    border: none;
+    font-size:20px;
+}
+
+.pop-up div:last-child input {
+    height: 25px;
+    font-size: 20px;
+}
+
+.pop-up div:last-child input::placeholder{
+    color: var(--mon-black);
+    font-size: 20px;
+}
+
+.revise-link:focus {
+    border-bottom: 1px solid var(--mon-black);
+}
+
+.revise-link:focus .revise-link::placeholder {
+    color: var(--mon-white);
 }

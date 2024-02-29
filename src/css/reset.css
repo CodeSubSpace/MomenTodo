@@ -63,3 +63,14 @@ span{
 	color: black;
 }
 
+button {
+	font-family: inherit;
+}
+
+.input-default {
+	border: none;
+	text-align: center;
+	background-color: inherit;
+	font-family: inherit;
+}
+
