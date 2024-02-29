@@ -9,41 +9,77 @@
 <body>
     <div class="focus-links">
         <div class="focus-links__header">
-            <button>Links</button>
-            <button>Focus</button>
+            <button class="side-button">Links</button>
+            <button class="side-button">Focus</button>
         </div>
         <div class="links">
             <div class="link">
-                <!-- add icon -->
+                <img class="fav-icon" src="https://google.com/favicon.ico">
+                <span>Google</span>
+            </div>
+            <div class="link">
+                <img class="fav-icon" src="https://www.naver.com/favicon.ico">
                 <span>Naver</span>
             </div>
             <div class="link">
-                <!-- add icon -->
+                <img class="fav-icon" src="https://www.youtube.com/favicon.ico">
                 <span>YouTube</span>
-            </div>
-            <div class="link">
-                <!-- add icon -->
-                <span>NomadCoder</span>
             </div>
         </div>
     </div>
     <div class="clock-weather">
         <div class="clock">
-            <h1>11:30</h1>
+            <h1 class="time">11:30</h1>
             <h3>Good Afternoon, Nomad Friends!</h3>
         </div>
         <div class="weather">
             <!-- add Icon -->
-            <span>Gwangju</span>
+            <span>Seoul, Sinchon</span>
         </div>
         
     </div>
     <main class="main">
-        <h2>What is your main goal for today?</h2>
+        <div class="hello none">
+            <h2>What is your name?</h2>
+            <input class="name-input">
+        </div>
+        <div class="todo-container">
+            <div class="todo-container__header">
+                <h2>What is your main goal for today?</h2>
+                <input class="todo-input">
+            </div>
+            <div class="todos">
+                <div class="todo-row">
+                    <h5>Wake up!</h5>
+                    <div>
+                        <button>√</button>
+                        <button>X</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <div class="blue"></div>
+    <div class="blue calendar">
+        <span>2024, March</span>
+        <div class="calendar-grid">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+    </div>
     <footer class="comment">
-        <h5>Imagine, When The Day!</h5>
+        <div class="quotes">
+            <h5 class="quote">Be Happy!</h5>
+            <h6 class="author">ME</h6>
+        </div>
+        <div class="comment__buttons">
+            <button class="comment__continue">continue</button>
+            <button class="commnet__save">save</button>
+        </div>
     </footer>
     <div class="yellow"></div>
     <script src="src/js/app.js"></script>

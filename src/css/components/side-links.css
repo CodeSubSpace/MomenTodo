@@ -1,0 +1,48 @@
+.focus-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side-button {
+    border: 1px solid black;
+    background-color: var(--mon-white);
+
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-family: "Namdhinggo", serif;
+}
+
+.focus-links__header {
+    display: flex;
+    gap: 20px;
+}
+
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid var(--mon-black);
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 220px;
+
+    overflow-y: scroll;
+}
+
+.links::-webkit-scrollbar{
+    display: none;
+}
+
+.link {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid var(--mon-white);
+    border-radius: 5px;
+}
+
+.fav-icon {
+    width: 15px;
+}

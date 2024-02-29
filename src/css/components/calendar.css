@@ -1,0 +1,21 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+
+    font-size: 30px;
+}
+
+.calendar-grid {
+    display: grid;
+    width: 90%;
+    height: 70%;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+
+    font-size: 12px;
+    border: 0.5px solid var(--mon-black);
+    padding: 5px;
+}

@@ -1,0 +1,20 @@
+.clock-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.time {
+    font-weight: 800;
+    font-size: 45px;
+}
