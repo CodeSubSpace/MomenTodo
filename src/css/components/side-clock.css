@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: flex-start;
+    gap: 50px;
 }
 
 .clock {
@@ -17,4 +17,17 @@
 .time {
     font-weight: 800;
     font-size: 45px;
+}
+
+.masterpiece-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.masterpiece-container img{
+    width: 90%;
+    /* height: 50%; */
+    object-fit: cover;
 }
