@@ -1,4 +1,6 @@
 .comment {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,13 +19,16 @@
 }
 
 .quote {
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .comment__buttons{
     display: flex;
     justify-content: end;
     gap: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
 
 .comment__buttons button{
