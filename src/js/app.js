@@ -16,6 +16,12 @@ function makeTodoContainer(name) {
             todoContainerHeader.appendChild(input);
         
         todoContainer.appendChild(todoContainerHeader);
+        
+        const toDos = document.createElement("div");
+        toDos.className = 'todos'
+        
+        todoContainer.appendChild(toDos);
+        
     main.appendChild(todoContainer);
 
     const clockHello = document.querySelector(".clock__hello");
@@ -33,9 +39,7 @@ function inputName(event){
         helloDiv.classList.add('none');
         
         makeTodoContainer(nameValue);
-        nameInput.removeEventListener("keydown", inputName); // input이 2번 눌리는 현상을 막고자 eventListener를 1회용으로 제한함.
-
-        
+        nameInput.removeEventListener("keydown", inputName); // input이 2번 눌리는 현상을 막고자 eventListener를 1회용으로 제한함.  
     }
 }
 
@@ -51,4 +55,52 @@ if (localStorage.getItem('name')) {
     // 로컬 스토리지에 name 값이 없을 때
     const nameInput = document.querySelector(".name-input");
     nameInput.addEventListener("keydown", inputName)
+}
+
+const toDoInput = document.querySelector(".todo-input");
+
+
+
+// .todos에 todo-row를 append하는 함수
+function appendToDo(todo) {
+    const toDos = document.querySelector(".todos")
+    const todoRow = document.createElement("div");
+    todoRow.className = "todo-row"
+
+        const h5 = document.createElement('h5');
+        h5.innerText = todo
+
+    todoRow.appendChild(h5)
+        const div = document.createElement('div');
+            const checkButton = document.createElement('button');
+            checkButton.innerText = 'Check!'
+
+        div.appendChild(checkButton)
+    todoRow.appendChild(div);
+    toDos.appendChild(todoRow);
+
+    // local Storage에 저장
+    const localToDos = JSON.parse(localStorage.getItem('todos') || '[]');
+    localToDos.push(todo);
+    localStorage.setItem('todos', JSON.stringify(localToDos));
+
+}
+
+
+function addToDo(event) {
+    if (event.key === 'Enter') {
+        const toDo = event.target.value
+        event.target.value = ""
+
+        if (toDo !== "") {
+            appendToDo(toDo);
+        }
+    }
+}
+
+toDoInput.addEventListener("keyup", addToDo); // 한글의 입력 방식 처리 문제가 발생하여 keydown이 아닌 keyup을 이용
+
+if (localStorage.getItem('todos')){
+    const toDoList = JSON.parse(localStorage.getItem('todos'));
+    toDoList.forEach(todo => appendToDo(todo));
 }
