@@ -13,6 +13,7 @@
 @import "components/todo.css";
 @import "components/quote.css";
 @import "components/calendar.css";
+@import "components/weather.css";
 
 /* css-animation */
 @import "css-animation/hover.css";

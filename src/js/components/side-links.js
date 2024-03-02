@@ -19,7 +19,7 @@ function addLink(event){
 
         
         // 파비콘 element 생성
-        newImg = document.createElement("img");
+        const newImg = document.createElement("img");
         newImg.src = "#";
         newImg.className = "fav-icon";
         newImg.classList.add("hover-parent");

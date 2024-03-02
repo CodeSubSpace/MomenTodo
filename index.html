@@ -71,8 +71,9 @@
     </div>
     <div class="clock-weather">
         <div class="clock">
-            <h1 class="time">11:30</h1>
-            <h3 class="clock__hello">Good Afternoon, Nomad Friends!</h3>
+            <h1 class="time"></h1>
+            <h3 class="clock__day"></h3>
+            <h3 class="clock__hello"> Nomad Friends!</h3>
         </div>
         <div class="masterpiece-container">
             <span>Random master piece</span>
@@ -84,48 +85,41 @@
             <h2>What is your name?</h2>
             <input class="name-input">
         </div>
-        <!-- <div class="todo-container">
-            <div class="todo-container__header">
-                <h2>What is your main goal for today?</h2>
-                <input class="todo-input">
-            </div>
-            <div class="todos">
-                <div class="todo-row">
-                    <h5>Wake up!</h5>
-                    <div>
-                        <button>√</button>
-                        <button>X</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </main>
     <div class="blue calendar">
-        <span>2024, March</span>
-        <div class="calendar-grid">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-        </div>
+        <span class="year-month"></span>
+        <span class="dow"></span>
     </div>
     <footer class="comment">
         <div class="quotes">
-            <h5 class="quote">Be Happy!</h5>
-            <h6 class="author">ME</h6>
+            <h5 class="quote"></h5>
+            <h6 class="author"></h6>
         </div>
         <div class="comment__buttons">
-            <button class="comment__continue">continue</button>
+            <button class="comment__continue hover-brown">continue</button>
         </div>
+        
     </footer>
+    <div class="weather-container">
+        <div class="weather">
+            <div class="weather__row">
+                <i class="weather__weather"></i>
+                <span class="weather__temp">-1°</span>
+            </div>
+            <div class="weather__row">
+                <span class="weather__city">Sinchon</span>
+                
+            </div>
+            
+        </div>
+    </div>
     <div class="yellow"></div>
     <script src="src/js/app.js"></script>
     <script src="src/js/components/side-links.js"></script>
     <script src="src/js/components/masterPiece.js"></script>
     <script src="src/js/components/quote.js"></script>
+    <script src="src/js/components/clock.js"></script>
+    <script src="src/js/components/weather.js"></script>
 
     <script src="https://kit.fontawesome.com/de97c4dde9.js" crossorigin="anonymous"></script>
 </body>

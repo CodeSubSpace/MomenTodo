@@ -74,7 +74,7 @@ function makeTodoContainer(name) {
     main.appendChild(todoContainer);
 
     const clockHello = document.querySelector(".clock__hello");
-    clockHello.innerText = `Good Day, ${name}`;
+    clockHello.innerText = `${name}!`;
 
     const toDoInput = document.querySelector(".todo-input");
     toDoInput.addEventListener("keyup", addToDo); // 한글의 입력 방식 처리 문제가 발생하여 keydown이 아닌 keyup을 이용

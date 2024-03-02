@@ -28,6 +28,7 @@
 
 .masterpiece-container img{
     width: 90%;
+    max-height: 150px;
     /* height: 50%; */
     object-fit: cover;
 }
