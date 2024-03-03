@@ -1,21 +1,22 @@
 // todo row를 화면상에서 제거하는 함수.
-function removeTodo(event, todo) {
+function removeTodo(event, toDoId) {
     const toDoRow = event.target.parentNode.parentNode;
     toDoRow.remove();
 
     const todos = JSON.parse(localStorage.getItem('todos'));
-    const updatedTodos = todos.filter(item => item !== todo);
+    console.log(todos)
+    const updatedTodos = todos.filter(item => item.id !== toDoId);
     localStorage.setItem('todos', JSON.stringify(updatedTodos));
 }
 
 // .todos에 todo-row를 append하는 함수
-function appendToDo(todo) {
+function appendToDo(toDoObj) {
     const toDos = document.querySelector(".todos")
     const todoRow = document.createElement("div");
     todoRow.className = "todo-row"
 
         const h5 = document.createElement('h5');
-        h5.innerText = todo
+        h5.innerText = toDoObj.todo
 
     todoRow.appendChild(h5)
         const div = document.createElement('div');
@@ -26,13 +27,10 @@ function appendToDo(todo) {
     todoRow.appendChild(div);
     toDos.appendChild(todoRow);
 
-    // local Storage에 저장
-    const localToDos = JSON.parse(localStorage.getItem('todos') || '[]');
-    localToDos.push(todo);
-    localStorage.setItem('todos', JSON.stringify(localToDos));
+    
 
     // Done button 누를 시 삭제
-    checkButton.addEventListener("click",  function(event){removeTodo(event, todo)}) // 두 가지 인자를 사용하기 위해서 익명 함수를 사용
+    checkButton.addEventListener("click",  function(event){removeTodo(event, toDoObj.id)}) // 두 가지 인자를 사용하기 위해서 익명 함수를 사용
 }
 
 // 내부에서 appendTodo 호출함
@@ -42,7 +40,12 @@ function addToDo(event) {
         event.target.value = ""
 
         if (toDo !== "") {
-            appendToDo(toDo);
+            // local Storage에 저장
+            const localToDos = JSON.parse(localStorage.getItem('todos') || '[]');
+            const toDoObj = {id:Date.now(), todo:toDo}
+            localToDos.push(toDoObj);
+            localStorage.setItem('todos', JSON.stringify(localToDos));
+            appendToDo(toDoObj);
         }
     }
 }
@@ -112,7 +115,5 @@ if (localStorage.getItem('name')) {
 
 if (localStorage.getItem('todos')){
     const toDoList = JSON.parse(localStorage.getItem('todos'));
-    localStorage.removeItem('todos')
     toDoList.forEach(todo => appendToDo(todo));
 }
-
