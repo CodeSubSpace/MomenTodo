@@ -1,3 +1,66 @@
-.focus-container {
+.focus-pop-up {
+    min-width: 500px;
+    top: 20px;
+    left: 230px;
+    background-color: var(--mon-white);
+
+    padding: 35px;
+    border: 1px solid var(--mon-black);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap: 30px;
+
+    z-index: 99;
+}
+
+.focus-pop-up__header {
+    font-size: 30px;
+}
+
+.focus-pop-up-btn {
     position: absolute;
+    top: 5px;
+    right: 5px;
+
+    border: none;
+    background-color: inherit;
+    font-size: 15px
+}   
+
+.foucs-button {
+    
+
+    border: 1px solid black;
+    background-color: inherit;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.count-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.count-main__header {
+    font-size: 100px;
+}
+
+.count-main__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.count-main__footer button {
+    border: 1px solid black;
+    background-color: var(--mon-white);
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-family: inherit;
+    font-size: 20px;
 }

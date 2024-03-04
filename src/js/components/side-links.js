@@ -1,6 +1,6 @@
 const focusLink = document.querySelector(".focus-links")
 const sideLinks = document.querySelector(".side-button:first-child");
-const sideFocus = document.querySelector(".side-button:last-child");
+// const sideFocus = document.querySelector(".side-button:last-child");
 const links = document.querySelector(".links");
 const link = document.querySelector(".link");
 
